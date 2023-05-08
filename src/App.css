@@ -4,10 +4,10 @@
 
 .container {
 	width: 100vw;
-	height: 100svh;
+	height: 93svh;
 	background: white;
 	display: flex;
-	overflow-x: scroll;
+	overflow-x: scroll !important;
 	scroll-snap-type: x mandatory;
 	scroll-behavior: smooth;
 	overflow: hidden;
@@ -26,6 +26,7 @@
 	display: flex;
 	justify-content: center;
 	text-align: center;
+	overflow-y: hidden;
 }
 .content-wrapper h1 {
 	font-size: 7rem;
