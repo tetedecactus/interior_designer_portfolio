@@ -5,7 +5,7 @@
 
 .container {
 	width: 100vw;
-	height: 93svh;
+	height: 90svh;
 	background: white;
 	display: flex;
 	overflow-x: scroll !important;

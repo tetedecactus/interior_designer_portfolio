@@ -5,6 +5,7 @@
 
 .container2 {
 	width: 100vw;
+	/* height: 100svh; */
 	height: 93svh;
 	background: white;
 	display: flex;

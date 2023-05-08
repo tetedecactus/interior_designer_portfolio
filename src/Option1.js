@@ -3,7 +3,7 @@ import './option1.css'
 function Option1() {
     return (
         <div className="option1" id="/about">
-            <header className="nav-bar h-12 flex justify-between text-center items-center justify-center">
+            <header className="nav-bar h-14 flex justify-between text-center items-center justify-center">
         <h2 className="nav-title">Logo</h2>
         <nav className="link">
           <ul className="inline-flex space-x-4">
