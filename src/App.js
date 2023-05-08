@@ -1,20 +1,20 @@
 import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Option1 from './Option1';
+import Option2 from './Option2';
+
 
 function App() {
   return (
+      <Router>
     <div className="App">
-      <header className="nav-bar h-11 flex justify-between text-center items-center justify-center">
-        <h2 className="nav-title">Logo</h2>
-        <nav className="link">
-          <ul className="inline-flex space-x-4">
-            <li>about us</li>
-            <li>portfolio</li>
-            <li>contact</li>
-          </ul>
-        </nav>
-      </header>
-      <div className="container">
-        <div className="box1">
+      <Routes>
+        <Route path="/about" element={<Option1 />} />
+        <Route path="/portfolio" element={<Option2 />} />
+      </Routes>
+      
+      {/* <div className="container pb-11">
+        <div className="box1 mx-11">
           <div className="content-wrapper page-1" id="page1">
             <header className="App-header">
               <h1 className="header-title">
@@ -24,9 +24,9 @@ function App() {
                 <p>click here! </p>
               </a>
             </header>
-          </div>
-        </div>
-        <div className="box2">
+            </div>
+            </div>
+            <div className="box2 mx-11">
           <div className="content-wrapper page-2" id="page2">
             <header className="App-header">
               <h1 className="header-title text-[#fb240f]">
@@ -34,36 +34,37 @@ function App() {
               </h1>
               <a href="#page3">
                 <p>click here! </p>
-              </a>
+                </a>
             </header>
-          </div>
+            </div>
         </div>
-        <div className="box3">
-          <div className="content-wrapper page-3" id="page3">
+        <div className="box3 mx-11">
+        <div className="content-wrapper page-3" id="page3">
             <header className="App-header">
-              <h1 className="header-title text-[#24751a]">
+            <h1 className="header-title text-[#24751a]">
                 Designer Intérieur | Justine Pardiac
-              </h1>
+                </h1>
               <a href="#page4">
-                <p>click here! </p>
+              <p>click here! </p>
               </a>
-            </header>
-          </div>
-        </div>
-        <div className="box4">
-          <div className="content-wrapper page-4" id="page4">
-            <header className="App-header">
+              </header>
+              </div>
+              </div>
+              <div className="box4 mx-11">
+              <div className="content-wrapper page-4" id="page4">
+              <header className="App-header">
               <h1 className="header-title text-[#5240a1]">
-                Justine Pardiac | Designer Intérieur
+              Justine Pardiac | Designer Intérieur
               </h1>
               <a href="#page1">
                 <p>click here! </p>
-              </a>
-            </header>
+                </a>
+                </header>
           </div>
-        </div>
-      </div>
+          </div>
+      </div> */}
     </div>
+          </Router>
   );
 }
 

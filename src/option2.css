@@ -1,9 +1,9 @@
-/* * {
+* {
 	margin: 0;
 	
 }
 
-.container {
+.container2 {
 	width: 100vw;
 	height: 93svh;
 	background: white;
@@ -13,8 +13,8 @@
 	scroll-behavior: smooth;
 	overflow: hidden;
 }
-.container div {
-	min-width: 93vw;
+.container2 div {
+	min-width: 100vw;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -22,17 +22,17 @@
 	scroll-snap-align: center;
 }
 
-.content-wrapper {
+.content-wrapper2 {
 	height: 100%;
 	display: flex;
 	justify-content: center;
 	text-align: center;
 	overflow-y: hidden;
 }
-.content-wrapper h1 {
+.content-wrapper2 h1 {
 	font-size: 7rem;
 }
-.content-wrapper p {
+.content-wrapper2 p {
 	font-size: 5rem;
 }
 
@@ -48,4 +48,4 @@
 .page-4 {
 	background-color: lightyellow;
 }
- */
+
