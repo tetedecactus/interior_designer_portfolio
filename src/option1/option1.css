@@ -5,7 +5,8 @@
 
 .container {
 	width: 100vw;
-	height: 90svh;
+	/* height: 100svh; */
+	height: 93svh;
 	background: white;
 	display: flex;
 	overflow-x: scroll !important;
@@ -14,7 +15,7 @@
 	overflow: hidden;
 }
 .container div {
-	min-width: 93vw;
+	min-width: 100vw;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -32,20 +33,17 @@
 .content-wrapper h1 {
 	font-size: 7rem;
 }
-.content-wrapper p {
-	font-size: 5rem;
-}
+
 
 .page-1 {
-	background-color: pink;
+	background-color: white;
 }
 .page-2 {
-	background-color: lightblue;
+	background-color: white;
 }
 .page-3 {
-	background-color: lightgreen;
+	background-color: white;
 }
 .page-4 {
-	background-color: lightyellow;
+	background-color: white;
 }
-
