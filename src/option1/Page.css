@@ -1,4 +1,11 @@
-.page1-box {
-    width: 100px !important;
-    display: inline-block !important;
+
+
+.cuisinne-img {
+    max-width: 680px !important;
+
+}
+
+.ciramique-mur {
+    height: 110px;
+    width: 1768px;
 }
