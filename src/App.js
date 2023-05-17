@@ -1,19 +1,18 @@
-import './App.css';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Option1 from './option1/Option1';
-// import Navbar from './Navbar';
-
+import './style/App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Portfolio from './pages/Portfolio';
+import Navbar from './components/Navbar';
 
 function App() {
   return (
-      <Router>
-        <div className="App">
-          {/* <Navbar /> */}
-          <Routes>
-            <Route path="/" element={<Option1 />} />
-          </Routes>
-        </div>
-      </Router>
+    <Router>
+      <div className="App">
+        {/* <Navbar /> */}
+        <Routes>
+          <Route path="/" element={<Portfolio />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
