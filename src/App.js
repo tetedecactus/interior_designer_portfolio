@@ -7,7 +7,7 @@ function App() {
   return (
     <Router>
       <div className="App">
-        {/* <Navbar /> */}
+        <Navbar id="root" />
         <Routes>
           <Route path="/" element={<Portfolio />} />
         </Routes>

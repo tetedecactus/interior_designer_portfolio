@@ -1,123 +1,147 @@
-.toggle-buttonover {
-  display: table-cell;
-  position: relative;
-  width: 100px;
-  height: 40px;
-  box-sizing: border-box;
+@import url(https://fonts.googleapis.com/css?family=Poiret+One);
+
+#navbar{
+  overflow:hidden;
+	  width:200px;
+	  height:100%;
+	  position:fixed;
+	  background-color:#FFFFFF;
+	  top:0;
+	  left:0;
+	  z-index:499;
+}
+#primary_nav{
+	  top:0px;
+    left:0px;
+	  position: fixed;
+	  display: block;
+	  left: -315px;
+	  width: 170px;
+	  height: 100%;
+	  background:rgba(238, 235, 235, 0.33);
+	  z-index:500;
+}
+#primary_nav ul{
+	  display: block;
+	  margin-top:80px;
+	  padding-left: 5px;
+	  list-style: none;
+}
+#primary_nav ul li a{
+	  display: block;
+	  padding:0 0 25px 20px;
+	  color: #FFF;
+	  font-weight:bold;
+	  font-size:15px;
+	  text-decoration: none;
+  	-webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+#primary_nav ul li a:hover, #primary_nav ul li a:active{
+	  color: #434244;
+	  padding-left:17px;
+  	text-decoration: none;
+	  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+#mobile_nav{
+	  font-size:36px;
+	  position: fixed;
+	  display: inline-block;
+  	top:10px;
+	  left:10px;
+  color: #434244;
+	  text-decoration: none;
+  z-index:1000;
+}
+#mobile_nav:hover{
+  	color: #bcb8c0;
 }
 
-.buttonover {
-  height: 100px;
-  margin: 20px;
-  background-color: #fff;
-  box-shadow: 0 10px 20px -8px #c5d6d6;
-  border-radius: 4px;
-}
+/* Play Button */
 
-.buttonover:before {
-  counter-increment: buttonounter;
-  content: counter(buttonounter);
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  color: #d7e3e3;
-  font-size: 12px;
-  line-height: 1;
-  padding: 5px;
-}
-
-.buttonover,
-.knobs,
-.layer {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-
-.button {
-  position: relative;
-  top: 50%;
-  width: 74px;
-  height: 36px;
-  margin: -20px auto 0 auto;
-  overflow: hidden;
-}
-
-.button,
-.button .layer {
-  border-radius: 100px;
-}
-
-.button2 {
-  border-radius: 2px;
-}
-
-.checkbox {
-  position: relative;
-  width: 100%;
+.circle {
+  grid-column: 2 / 3;
+  grid-row: 4 / 6;
+  width: 9rem;
   height: 100%;
-  padding: 0;
-  margin: 0;
-  opacity: 0;
-  cursor: pointer;
-  z-index: 3;
-}
+  justify-self: center;
+  border-radius: 1rem;
+  display: grid;
+  grid-template-rows: 1fr;
+  justify-items: center;
+  align-items: center;
 
-.knobs {
-  z-index: 2;
-}
+  &__btn {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    width: 6rem;
+    height: 6rem;
+    display: flex;
+    margin: .6rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 3.2rem;
+    color: var(--primary);
+    z-index: 300;
+    background: var(--greyLight-1);
+    box-shadow: $shadow;
+    cursor: pointer;
+    position: relative;
+    &.shadow {box-shadow: $inner-shadow;}
 
-.layer {
-  width: 100%;
-  background-color: #1595cc;
-  transition: 0.3s ease all;
-  z-index: 1;
-}
+    .play {
+      position: absolute;
+      opacity: 0;
+      transition: all .2s linear;
+      &.visibility {
+        opacity: 1;
+      }
+    }
+    .pause {
+      position: absolute;
+      transition: all .2s linear;
+      &.visibility {
+        opacity: 0;
+      }
+    }
+  }
 
-/* Button */
-#button .knobs:before,
-#button .knobs:after {
-  position: absolute;
-  top: 4px;
-  left: 4px;
-  width: 20px;
-  height: 10px;
-  color: #fff;
-  font-size: 10px;
-  font-weight: bold;
-  text-align: center;
-  line-height: 1;
-  padding: 9px 4px;
-  background-color: #000;
-  border-radius: 50%;
-  transition: 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;
-}
+  &__back-1, &__back-2 {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    filter: blur(1px);
+    z-index: 100;
+  }
 
-#button .knobs:before {
-  content: 'YES';
-}
+  &__back-1 {
+    box-shadow: .4rem .4rem .8rem var(--greyLight-2), 
+    -.4rem -.4rem .8rem var(--white);
+    background: linear-gradient(to bottom right, var(--greyLight-2) 0%, var(--white) 100%);
+    animation: waves 4s linear infinite;
 
-#button .knobs:after {
-  content: 'NO';
-}
+    &.paused { 
+    animation-play-state: paused;
+    }
+  }
 
-#button .knobs:after {
-  top: -28px;
-  right: 4px;
-  left: auto;
-  background-color: #000;
-}
-
-#button .checkbox:checked + .knobs:before {
-  top: -28px;
-}
-
-#button .checkbox:checked + .knobs:after {
-  top: 4px;
-}
-
-#button .checkbox:checked ~ .layer {
-  background-color: #d618d6;
+  &__back-2 {
+    box-shadow: .4rem .4rem .8rem var(--greyLight-2), 
+    -.4rem -.4rem .8rem var(--white);
+    animation: waves 4s linear 2s infinite;
+    
+    &.paused { 
+      animation-play-state: paused;
+    }
+  }
 }
