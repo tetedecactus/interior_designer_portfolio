@@ -4,8 +4,8 @@ function Page2() {
   return (
     <div className="page2-box flex flex-col items-center mt-20 overflow-auto">
       <h3 className="text-3xl font-thin">JUSTINE PARDIAC</h3>
-      <div class="relative">
-        <div class="absolute h-64 inset-y-0 left-1/2 border-l border-dashed border-gray-400"></div>
+      <div className="relative">
+        <div className="absolute h-64 inset-y-0 left-1/2 border-l border-dashed border-gray-400"></div>
       </div>
       <img src={jutine} alt="Bio de Justine Pardiac" />
     </div>

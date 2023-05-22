@@ -1,10 +1,10 @@
+import React, { useState, useEffect } from 'react';
 import logo from '../asset/img/pardi_design_logo.svg';
 import '../style/Navbar.css';
 import $ from 'jquery';
-import { FaPause, FaPlay } from 'react-icons/fa';
-import {IonIcon} from "react-ion-icon";
 
 $(document).ready(function () {
+  // NavBar
   $('#mobile_nav').click(function () {
     //toggles nav and ensures other elements play nice too
     if ($('#primary_nav').css('left') < '0px') {
@@ -20,14 +20,13 @@ $(document).ready(function () {
       // $('body').css('overflow-x', 'hidden');
     }
   });
-}); //end
-
-/*  play button */
-const play = document.querySelector('.play');
-const pause = document.querySelector('.pause');
-const playBtn = document.querySelector('.circle__btn');
-const wave1 = document.querySelector('.circle__back-1');
-const wave2 = document.querySelector('.circle__back-2');
+  // Play & Pause Button
+  var btn = $('.button');
+  btn.click(function () {
+    btn.toggleClass('paused');
+    return false;
+  });
+});
 
 function Navbar() {
   return (
@@ -44,16 +43,7 @@ function Navbar() {
               alt="Pardi Design Logo"
               width={130}
             />
-            <div class="circle">
-              <span class="circle__btn">
-                <IonIcon class="pause" name="pause" />
-                <IonIcon class="play" name="play" />
-                <FaPause class="pause" name="pause" />
-                <FaPlay class="play" name="play" />
-              </span>
-              <span class="circle__back-1"></span>
-              <span class="circle__back-2"></span>
-            </div>
+            <button className="button"></button>
             <li>
               <a href="#">Home</a>
             </li>
